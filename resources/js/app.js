@@ -7,6 +7,7 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+Vue.config.ignoredElements = [/^ion-/]
 
 /**
  * The following block of code may be used to automatically register your
@@ -21,6 +22,8 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('calandar-component', require('./components/CalandarComponent.vue').default);
+Vue.component('create-event-component', require('./components/CreateEventComponent.vue').default);
+Vue.component('modal-component', require('./components/ModalComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
